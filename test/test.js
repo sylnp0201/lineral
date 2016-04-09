@@ -43,6 +43,15 @@ describe('lineral', () => {
     });
   });
 
+  describe('currying', () => {
+    it('returns the same value as the non-currying calls', () => {
+      const myL = L(obj);
+      assert.equal(L(obj, 'foo'), myL('foo'));
+      assert.equal(L(obj, 'say.hello'), myL('say.hello'));
+      assert.equal(L(obj, 'zoo.topia'), myL('zoo.topia'));
+    });
+  });
+
   describe('when the path includes arrays', () => {
     let objWithArr;
     beforeEach(() => {

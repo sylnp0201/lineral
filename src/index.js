@@ -1,8 +1,7 @@
-module.exports = function(obj = null, path) {
+function fetchValue(obj, path) {
   if (typeof path !== 'string') {
     return null;
   }
-
   return path.split('.').reduce((value, key) => {
     if (value === null) return null;
 
@@ -20,4 +19,14 @@ module.exports = function(obj = null, path) {
       return null;
     }
   }, obj);
+}
+
+module.exports = function(obj = null, path) {
+  if (arguments.length < 2) {
+    return function(path) {
+      return fetchValue(obj, path);
+    }
+  } else {
+    return fetchValue(obj, path);
+  }
 }
