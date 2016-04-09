@@ -42,7 +42,7 @@ myL('foo.[0]'); //=> 'zero'
 ## Install
 `npm install lineral`
 
-Bundle size: 451B
+Bundle size: 572B
 
 
 ## More Examples
