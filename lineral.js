@@ -1,10 +1,6 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = function () {
+module.exports = function () {
   var obj = arguments.length <= 0 || arguments[0] === undefined ? null : arguments[0];
   var path = arguments[1];
 

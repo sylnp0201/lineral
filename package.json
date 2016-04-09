@@ -1,10 +1,10 @@
 {
   "name": "lineral",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A helper for javascript object",
   "main": "lineral.js",
   "scripts": {
-    "build": "babel index.js --out-file lineral.js",
+    "build": "babel src --out-file lineral.js && uglifyjs lineral.js --compress -o lineral.min.js",
     "test": "mocha --compilers js:babel-register"
   },
   "engines": {
@@ -35,6 +35,7 @@
     "babel-register": "^6.7.2",
     "install": "^0.6.1",
     "mocha": "^2.4.5",
-    "npm": "^3.8.6"
+    "npm": "^3.8.6",
+    "uglify-js": "^2.6.2"
   }
 }

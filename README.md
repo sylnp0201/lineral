@@ -31,6 +31,8 @@ L(myObj, 'foo.[10].two'); // => null
 ## Install
 `npm install lineral`
 
+Bundle size: 451B
+
 
 ## More Examples
 Assume you have a JavaScript object like this:
@@ -74,4 +76,5 @@ const headline = L(article, 'headline'); // trivial, same as article.headline
 const authorImages = article.authors
   .map(author => L(author, 'images.[0].src'))
   .filter(imageSrc => imageSrc != null);
+// => ['the-1x-image.png']
 ```

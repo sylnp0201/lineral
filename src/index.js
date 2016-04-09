@@ -1,4 +1,4 @@
-export default function(obj = null, path) {
+module.exports = function(obj = null, path) {
   if (typeof path !== 'string') {
     return null;
   }
